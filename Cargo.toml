@@ -3,6 +3,11 @@ name = "xop"
 version = "0.1.0"
 edition = "2021"
 authors = [ "Shinya Fujino <shf0811@gmail.com>" ]
+license = "MIT"
+description = "A cross-platform command-line tool to open a file or directory with the default application."
+repository = "https://github.com/morinokami/xop"
+readme = "README.md"
+categories = ["command-line-utilities"]
 
 [dependencies]
 clap = { version = "4.3.8", features = ["derive"] }
