@@ -6,3 +6,4 @@ authors = [ "Shinya Fujino <shf0811@gmail.com>" ]
 
 [dependencies]
 clap = { version = "4.3.8", features = ["derive"] }
+which = "4.4.0"
