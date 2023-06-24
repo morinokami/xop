@@ -31,7 +31,7 @@ pub fn find_opener() -> Result<String, Box<dyn Error>> {
     } else if cfg!(target_os = "macos") && which("open").is_ok() {
         return Ok("open".to_string());
     } else if cfg!(target_os = "linux") {
-        let candidates = vec!["xdg-open", "gnome-open", "kde-open"];
+        let candidates = vec!["xdg-open", "wslview", "gnome-open", "kde-open", "exo-open"];
         for candidate in candidates {
             if which(candidate).is_ok() {
                 return Ok(candidate.to_string());
