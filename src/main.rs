@@ -15,13 +15,13 @@ pub struct Args {
 pub fn run(args: Args) -> Result<(), Box<dyn Error>> {
     let opener = find_opener()?;
     for file in &args.files {
-        call_open(&opener, file)?;
+        call_opener(&opener, file)?;
     }
     Ok(())
 }
 
-pub fn call_open(command: &str, path: &str) -> Result<(), Box<dyn Error>> {
-    Command::new(command).arg(path).spawn()?;
+pub fn call_opener(opener: &str, path: &str) -> Result<(), Box<dyn Error>> {
+    Command::new(opener).arg(path).spawn()?;
     Ok(())
 }
 
